@@ -111,7 +111,7 @@ env.bak/
 venv.bak/
 .vscode/
 login_cred.py
-filter_options
+filter_options.py
 
 # Spyder project settings
 .spyderproject
