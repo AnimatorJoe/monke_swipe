@@ -79,3 +79,7 @@ class Bot:
 
 b = Bot()
 b.fb_login()
+
+# run automated processes in the console
+# ex: b.swipe_right_inf_times()
+# the above is an example that will commence infinite swiping
