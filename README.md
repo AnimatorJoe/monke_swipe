@@ -15,14 +15,11 @@ Install whatever is in the requirements.txt with `pip install -r requirements.tx
 
 ### Interface and Set Up
 
-For automated logins, create a file called `login_cred.py` and enter credentials, ex:
+For automated logins, create a file called `login_cred.py` and enter credentials. (Alternatively, you can log in manually).
 
-```
-fb_username = "georgebush420@gmail.com"
-fb_password = "bush-did-420"
-```
+To set filter keywords, create a file called `filter_options.py`.
 
-Alternatively, you can log in manually.
+The formats required for each file can be found under `empty_configs/`.
 
 Run program via `python -i Bot.py`.
 
@@ -35,7 +32,7 @@ Available automated processes are listed in the Bot class.
 - [ ] Handle random popups.
 - [ ] Grab text from displayed profiles.
 - [ ] Implement keyword filtering.
-- [ ] Implement better swipe heuristic functions. (maybe return continuous values in [0, 1] instead of a boolean)
+- [ ] Implement better swipe heuristic functions.
 
 ## Optional Goals
 
