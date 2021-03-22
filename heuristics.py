@@ -23,14 +23,15 @@ def favored_only(profile):
 
     return False
 
+# returns Ture only if favored and and blocked criterias are satisified
 def favored_and_not_blocked(profile):
     return filter_blocked(profile) and favored_only(profile)
 
 # cat dict entries, returns string of all dictionary entries concatenated and lower cased
 def cat_dict(profile):
     compl_str = ""
-    for s in profile.values:
+    for s in profile.values():
         compl_str += s + ' '
-    compl_str.lower()
+    compl_str = compl_str.lower()
     return compl_str
 

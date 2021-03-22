@@ -1,9 +1,10 @@
 from selenium import webdriver
 from time import sleep
 from login_cred import fb_username, fb_password
-from heuristics import always_true, favored_and_not_blocked
+from heuristics import always_true, filter_blocked, favored_only, favored_and_not_blocked
 from math import inf
 import random
+import sys
 
 class Bot:
     def __init__(self):
@@ -97,6 +98,7 @@ class Bot:
             bio_container = self.driver.find_element_by_xpath('//*[@id="t-1890905246"]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[2]/div[2]/div')
             dict['bio'] = bio_container.text
         except Exception:
+            print("fail")
             pass
         
         try:
@@ -105,8 +107,8 @@ class Bot:
         except Exception:
             pass
         
-        print("parsed profile entry")
-        print(dict)
+        # print("parsed profile entry")
+        # print(dict)
 
         # close profile
         close_btn = self.driver.find_element_by_xpath('//*[@id="t-1890905246"]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[1]/span/a')
@@ -117,6 +119,7 @@ class Bot:
     # quit
     def quit(self):
         self.driver.quit()
+        sys.exit()
 
 b = Bot()
 b.fb_login()
