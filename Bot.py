@@ -1,7 +1,7 @@
 from selenium import webdriver
 from time import sleep
 from login_cred import fb_username, fb_password
-from heuristics import always_true
+from heuristics import always_true, favored_and_not_blocked
 from math import inf
 import random
 
@@ -52,13 +52,17 @@ class Bot:
         left_btn = self.driver.find_element_by_xpath('//*[@id="t-1890905246"]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div[2]/div[2]/button')
         left_btn.click()
 
-    # swipe right x times unconditional
-    def swipe_right_inf_times(self):
+    # swipe right inf times unconditional
+    def swipe_right_inf_times_unconditional(self):
         self.swipe_on(always_true, inf)
 
     # swipe right x times unconditional
     def swipe_right_x_times(self, x):
         self.swipe_on(always_true, x)
+
+    # swipe inf times on favored_and_not_blocked
+    def swipe_right_inf_times_suboptimal(self):
+        self.swipe_on(favored_and_not_blocked, inf)
 
     # swipes on times number of profiles and only swiping right when heuristic function returns true
     def swipe_on(self, heuristic, times):
@@ -108,7 +112,7 @@ class Bot:
         close_btn = self.driver.find_element_by_xpath('//*[@id="t-1890905246"]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[1]/span/a')
         close_btn.click()
 
-        return
+        return dict
 
     # quit
     def quit(self):

@@ -3,7 +3,7 @@ from filter_options import favored_keywords, blocked_keywords
 always_true = lambda _ : True
 always_false = lambda _: False
 
-# profile passed in as a dictionary
+# only returns True if not blocked
 def filter_blocked(profile):
     compl_str = cat_dict(profile)
 
@@ -13,8 +13,7 @@ def filter_blocked(profile):
 
     return True
 
-
-# profile passed in as a dictionary
+# only returns True if favored
 def favored_only(profile):
     compl_str = cat_dict(profile)
     
@@ -23,6 +22,9 @@ def favored_only(profile):
             return True
 
     return False
+
+def favored_and_not_blocked(profile):
+    return filter_blocked(profile) and favored_only(profile)
 
 # cat dict entries, returns string of all dictionary entries concatenated and lower cased
 def cat_dict(profile):

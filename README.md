@@ -38,4 +38,4 @@ Available automated processes are listed in the Bot class.
 
 - [ ] Output log files to track automated decisions.
 - [ ] Implement CSV outputting for user selections to allow ML training.
-- [ ] Integrate a ML somehow.
+- [ ] Integrate ML somehow.
