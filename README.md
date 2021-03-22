@@ -3,9 +3,9 @@ This one night, I spent 20 minutes swiping on Tinder like a monke, and figured "
 
 ## Setting Up the Runtime
 
-### Webdriver
+### WebDriver
 
-To run the project, first make sure you have the Chromium Web Driver [installed](https://chromedriver.chromium.org/).
+To run the project, first make sure you have the Chromium WebDriver [installed](https://chromedriver.chromium.org/).
 
 For Mac OS, make sure the executable is moved to `/usr/local/bin`.
 
@@ -13,7 +13,7 @@ For Mac OS, make sure the executable is moved to `/usr/local/bin`.
 
 Install whatever is in the requirements.txt with `pip install -r requirements.txt` either globally or in a virtualenv (recommended).
 
-## Interface and Set Up
+### Interface and Set Up
 
 For automated logins, create a file called `login_cred.py` and enter credentials, ex:
 
