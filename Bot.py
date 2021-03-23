@@ -70,7 +70,7 @@ class Bot:
         count = 1
         while (count <= times or times == inf):
 
-            rand_wait = random.uniform(1, 2)
+            rand_wait = random.uniform(0, 1.5)
             sleep(rand_wait)
 
             p = self.get_profile()
@@ -98,7 +98,6 @@ class Bot:
             bio_container = self.driver.find_element_by_xpath('//*[@id="t-1890905246"]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[2]/div[2]/div')
             dict['bio'] = bio_container.text
         except Exception:
-            print("fail")
             pass
         
         try:

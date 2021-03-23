@@ -30,8 +30,8 @@ Available automated processes are listed in the Bot class.
 - [x] Set up automated login.
 - [x] Implement infinite swiping.
 - [ ] Handle random popups.
-- [ ] Grab text from displayed profiles.
-- [ ] Implement keyword filtering.
+- [x] Grab text from displayed profiles.
+- [x] Implement keyword filtering.
 - [ ] Implement better swipe heuristic functions.
 
 ## Optional Goals
